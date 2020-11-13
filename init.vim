@@ -12,4 +12,5 @@ source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/general/paths.vim
 " plug-in coc (Conquerer of Completion) config
 source $HOME/.config/nvim/plug-config/coc.vim
-
+" Ranger file search
+source $HOME/.config/nvim/plug-config/rnvimr.vim

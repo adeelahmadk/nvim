@@ -25,6 +25,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Keeping up to date with master
     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
+    " File explorer & search
+    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+
     " Status / tabline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
