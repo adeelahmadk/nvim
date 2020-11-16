@@ -10,16 +10,20 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Syntax Highlighting - Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    
+
     " File Explorer - Browse & open files
-    Plug 'scrooloose/NERDTree'
-    
+    " Plug 'scrooloose/NERDTree'
+
     " Pair Brackets - Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
-    
+
     " Theme - Onedark theme for nvim
     Plug 'joshdick/onedark.vim'
-    
+    " Theme - papercolor light/dark theme
+    Plug 'NLKNguyen/papercolor-theme'
+    " Theme - GitHub inspired light theme
+    Plug 'endel/vim-github-colorscheme'
+
     " Intellisense - Stable version of coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Keeping up to date with master
@@ -27,6 +31,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " File explorer & search
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+
+    " FZF fuzzy search
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+
+    " vim-rooter 
+    Plug 'airblade/vim-rooter'
 
     " Status / tabline
     Plug 'vim-airline/vim-airline'
