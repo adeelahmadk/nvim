@@ -276,9 +276,9 @@ The leader key is set to `space`. Frequently used key bindings are listed in the
 | gb                      | n    | gv > Commit buffer | :GBrowse commit under cursor                                 |
 | o                       | n    | gv > Commit buffer | show contents of a commit                                    |
 | o                       | v    | gv > Commit buffer | show diff of selected commits                                |
-| O                       |      |                    | open in a new tab                                            |
-| .                       | n    |                    | open fugitive command `:Git [CURSOR] SHA`                    |
-| q                       | n    |                    | close                                                        |
+| O                       | n,v  | gv > Commit buffer | open in a new tab                                            |
+| .                       | n    | gv > Commit buffer | open fugitive command `:Git [CURSOR] SHA`                    |
+| q                       | n    | gv > Commit buffer | close                                                        |
 
 Completion and key binding files for `fzf` are located in `autoload/plugged/fzf/shell/`:
 
