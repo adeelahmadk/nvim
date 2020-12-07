@@ -222,8 +222,8 @@ The leader key is set to `space`. Frequently used key bindings are listed in the
 | C-j                     | n    | nvim              | navigate to the window below                |
 | C-k                     | n    | nvim              | navigate to the window above                |
 | C-l                     | n    | nvim              | navigate to the window on right             |
-| <leader>o               | n    | nvim              | insert empty line below current line        |
-| <leader>O               | n    | nvim              | insert empty line above current line        |
+| <`leader`>o             | n    | nvim              | insert empty line below current line        |
+| <`leader`>O             | n    | nvim              | insert empty line above current line        |
 | [g                      | n    | coc               | navigate previous diagnostic                |
 | ]g                      | n    | coc               | navigate next diagnostic                    |
 | gd                      | n    | coc               | goto definition (of a ref.)                 |
@@ -231,34 +231,34 @@ The leader key is set to `space`. Frequently used key bindings are listed in the
 | gi                      | n    | coc               | goto implementation                         |
 | gr                      | n    | coc               | goto references (of a def.)                 |
 | K                       | n    | coc               | show doc.                                   |
-| <leader>rn              | n    | coc               | rename a symbol (all instances)             |
-| <leader>a               | n    | coc > CocList     | show all diagnostics                        |
-| <leader>c               | n    | coc > CocList     | show coc commands                           |
-| <leader>ou              | n    | coc > CocList     | outline symbols of current doc.             |
-| <leader>s               | n    | coc > CocList     | search workspace symbols                    |
-| <leader>ex              | n    | coc > CocList     | manage extensions                           |
-| <leader>e               | n    | coc > Explorer    | open coc file explorer                      |
-| <leader>f               | n    | coc > Explorer    | open floating coc file explorer             |
-| <leader>r               | n    | ranger            | toggle ranger file explorer                 |
+| <`leader`>rn            | n    | coc               | rename a symbol (all instances)             |
+| <`leader`>a             | n    | coc > CocList     | show all diagnostics                        |
+| <`leader`>c             | n    | coc > CocList     | show coc commands                           |
+| <`leader`>ou            | n    | coc > CocList     | outline symbols of current doc.             |
+| <`leader`>s             | n    | coc > CocList     | search workspace symbols                    |
+| <`leader`>ex            | n    | coc > CocList     | manage extensions                           |
+| <`leader`>e             | n    | coc > Explorer    | open coc file explorer                      |
+| <`leader`>f             | n    | coc > Explorer    | open floating coc file explorer             |
+| <`leader`>r             | n    | ranger            | toggle ranger file explorer                 |
 | :FZF                    | n    | fzf > FZF         | fuzzy file search                           |
 | C-f                     | n    | fzf > Files       | file search with preview                    |
 | :BLines                 | n    | fzf > BLines      | search within a large file open in a buffer |
 | :Lines                  | n    | fzf > Lines       | search in all the open buffers              |
-| <leader>b               | n    | fzf > Buffers     | buffer preview & switching                  |
-| <leader>g               | n    | ripgrep > Rg      | ripgrep: regex search within file contents  |
-| <leader>t               | n    | ctags > Tags      | Ctags:                                      |
-| <leader>m               | n    | :Marks            |                                             |
+| <`leader`>b             | n    | fzf > Buffers     | buffer preview & switching                  |
+| <`leader`>g             | n    | ripgrep > Rg      | ripgrep: regex search within file contents  |
+| <`leader`>t             | n    | ctags > Tags      | Ctags:                                      |
+| <`leader`>m             | n    | :Marks            |                                             |
 | :History                | n    |                   | browse history of commands                  |
 | :Ag                     | n    | silversurfer > Ag | content search within project directory     |
-| <leader>/               | n,v  | vim-commentary    | toggle comment/uncomment a line or a block  |
+| <`leader`>/             | n,v  | vim-commentary    | toggle comment/uncomment a line or a block  |
 | :SLoad                  | n    | vim-startify      | load a session [[ref#6,7](#References)]     |
 | :SSave[!]               | n    | vim-startify      | save a session of open buffers              |
 | :SDelete[!]             | n    | vim-startify      | delete a session                            |
 | :SClose                 | n    | vim-startify      | close an open session                       |
 | :SignifyToggle          | n    | vim-signify       | toggle git hunks in the gutter              |
 | :SignifyToggleHighlight | n    | vim-signify       | toggle git status color highlites           |
-| <leader>gj              | n    | vim-signify       | jump to next hunk                           |
-| <leader>gk              | n    | vim-signify       | jump to previous hunk                       |
+| <`leader`>gj            | n    | vim-signify       | jump to next hunk                           |
+| <`leader`>gk            | n    | vim-signify       | jump to previous hunk                       |
 | :Git add                | n    | vim-fugitive      | git add ([ref#8](#References) for detail)   |
 | :Git commit             | n    | vim-fugitive      | git commit                                  |
 | :Git push               | n    | vim-fugitive      | git push                                    |
