@@ -24,6 +24,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Theme - GitHub inspired light theme
     Plug 'endel/vim-github-colorscheme'
 
+    " Add Some Color
+    Plug 'norcalli/nvim-colorizer.lua'
+    Plug 'junegunn/rainbow_parentheses.vim'
+
     " Intellisense - Stable version of coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Keeping up to date with master
@@ -36,10 +40,22 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
-    " vim-rooter 
+    " vim-rooter
     Plug 'airblade/vim-rooter'
 
     " Status / tabline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+
+    " comment out code
+    Plug 'tpope/vim-commentary'
+
+    " fancy startup page for project management
+    Plug 'mhinz/vim-startify'
+
+    " git integration
+    Plug 'mhinz/vim-signify'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-rhubarb'
+    Plug 'junegunn/gv.vim'
 call plug#end()
