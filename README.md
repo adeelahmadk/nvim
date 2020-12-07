@@ -1,6 +1,6 @@
 # Neovim IDE configuration
 
-[TOC]
+
 
 A configuration for `neovim` editor including plug-ins to enable IDE features like intellisense, bracket pairing, status lines, etc.
 
@@ -212,8 +212,8 @@ The leader key is set to `space`. Frequently used key bindings are listed in the
 | M-h                     | n    | nvim              | resize v-split windows                      |
 | M-l                     | n    | nvim              | resize v-split windows                      |
 | C-u                     | n,i  | nvim              | easy caps current word                      |
-| <tab>                   | n    | nvim              | move to next buffer                         |
-| <S-tab>                 | n    | nvim              | move to previous buffer                     |
+| <`tab`>                 | n    | nvim              | move to next buffer                         |
+| <S-`tab`>               | n    | nvim              | move to previous buffer                     |
 | C-s                     | n    | nvim              | save                                        |
 | C-q                     | n    | nvim              | quit neovim (after saving open buffers)     |
 | <                       | n    | nvim              | insert tab (indent)                         |
