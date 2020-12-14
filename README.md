@@ -2,7 +2,7 @@
 
 
 
-A configuration for `neovim` editor including plug-ins to enable IDE features like intellisense, bracket pairing, status lines, etc.
+A configuration for `neovim` editor including plug-ins to enable IDE-like features like intellisense, bracket pairing, status lines, etc.
 
 ## Pre-requisites & Dependencies
 
@@ -12,11 +12,22 @@ First you need to install neovim, using your package manager preferably:
 sudo apt install neovim
 ```
 
-Install vim plug in the directory you cloned the repo:
+Clone this configuration in `~/.config`:
+
+```sh
+cd ~/.config
+git clone https://github.com/cod3g3nki/nvim.git
+# or clone a specific tag (vx.x.x), e.g.
+git clone -b v0.2.0 --depth 1 https://github.com/cod3g3nki/nvim.git
+```
+
+Install `vim-plug` in the directory you cloned the repo:
 
 ```sh
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+
+Start nvim and run command `:PlugInstall`, restart nvim for configuration and plug-ins to take effect or run `:source $MYVIMRC`. You may also skip installing `vim-plug` and run `:PlugInstall` command on the first run.
 
 ### Utilities & Package managers
 
@@ -44,8 +55,6 @@ Node package `neovim` can be installed using `npm`:
 npm install -g neovim
 ```
 
-
-
 ### Work-flow tools
 
 - **ranger**: file search
@@ -67,7 +76,7 @@ git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger
 pip install ueberzug
 ```
 
-add this config to `~/.config/ranger/rc.conf`:
+add following configuration to `~/.config/ranger/rc.conf`:
 
 ```
 set preview_images_method ueberzug
@@ -98,8 +107,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 ```
 
-
-
 ### Color-aid
 
 - **Vim Colorizer**: color highlighter for Neovim written in `luajit`. It sets color code's background to help understand visually. You can increment and decrement numbers in vim with `c-a` and `c-x`.
@@ -112,8 +119,6 @@ Install `luarocks` if you want to use with `coc-lua` extension.
 ```sh
 sudo apt install luarocks
 ```
-
-
 
 ## Plug-ins & Extensions
 
@@ -137,7 +142,7 @@ Plug-ins that are pre-configured in this repo are:
 - tpope/vim-rhubarb: Browse repo, insert issue # & urls
 - junegunn/gv.vim: Git commit browser
 
-In addition to these, there are `coc` extensions for intellisense:
+In addition to these, following `coc` extensions can be installed for intellisense:
 
 - vimlsp
 - sh
@@ -150,6 +155,8 @@ In addition to these, there are `coc` extensions for intellisense:
 - python
 - yaml
 - explorer
+
+For detail check [coc GitHub wiki](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions).
 
 ## Theme
 
@@ -205,80 +212,82 @@ Don't forget to add language servers, along with other configurations, in `coc-s
 
 The leader key is set to `space`. Frequently used key bindings are listed in the table below:
 
-| Mapping                 | Mode | Supported by       | Description                                                  |
-| ----------------------- | ---- | ------------------ | ------------------------------------------------------------ |
-| M-j                     | n    | nvim               | resize h-split windows                                       |
-| M-k                     | n    | nvim               | resize h-split windows                                       |
-| M-h                     | n    | nvim               | resize v-split windows                                       |
-| M-l                     | n    | nvim               | resize v-split windows                                       |
-| C-u                     | n,i  | nvim               | easy caps current word                                       |
-| <`tab`>                 | n    | nvim               | move to next buffer                                          |
-| <S-`tab`>               | n    | nvim               | move to previous buffer                                      |
-| C-s                     | n    | nvim               | save                                                         |
-| C-q                     | n    | nvim               | quit neovim (after saving open buffers)                      |
-| <                       | n    | nvim               | insert tab (indent)                                          |
-| >                       | n    | nvim               | remove tab                                                   |
-| C-h                     | n    | nvim               | navigate to the window on left                               |
-| C-j                     | n    | nvim               | navigate to the window below                                 |
-| C-k                     | n    | nvim               | navigate to the window above                                 |
-| C-l                     | n    | nvim               | navigate to the window on right                              |
-| <`leader`>o             | n    | nvim               | insert empty line below current line                         |
-| <`leader`>O             | n    | nvim               | insert empty line above current line                         |
-| [g                      | n    | coc                | navigate previous diagnostic                                 |
-| ]g                      | n    | coc                | navigate next diagnostic                                     |
-| gd                      | n    | coc                | goto definition (of a ref.)                                  |
-| gy                      | n    | coc                | goto type definition                                         |
-| gi                      | n    | coc                | goto implementation                                          |
-| gr                      | n    | coc                | goto references (of a def.)                                  |
-| K                       | n    | coc                | show doc.                                                    |
-| <`leader`>rn            | n    | coc                | rename a symbol (all instances)                              |
-| <`leader`>a             | n    | coc > CocList      | show all diagnostics                                         |
-| <`leader`>c             | n    | coc > CocList      | show coc commands                                            |
-| <`leader`>ou            | n    | coc > CocList      | outline symbols of current doc.                              |
-| <`leader`>s             | n    | coc > CocList      | search workspace symbols                                     |
-| <`leader`>ex            | n    | coc > CocList      | manage extensions                                            |
-| <`leader`>e             | n    | coc > Explorer     | open coc file explorer                                       |
-| <`leader`>f             | n    | coc > Explorer     | open floating coc file explorer                              |
-| <`leader`>r             | n    | ranger             | toggle ranger file explorer                                  |
-| :FZF                    | n    | fzf > FZF          | fuzzy file search                                            |
-| C-f                     | n    | fzf > Files        | file search with preview                                     |
-| :BLines                 | n    | fzf > BLines       | search within a large file open in a buffer                  |
-| :Lines                  | n    | fzf > Lines        | search in all the open buffers                               |
-| <`leader`>b             | n    | fzf > Buffers      | buffer preview & switching                                   |
-| <`leader`>g             | n    | ripgrep > Rg       | ripgrep: regex search within file contents                   |
-| <`leader`>t             | n    | ctags > Tags       | Ctags:                                                       |
-| <`leader`>m             | n    | :Marks             |                                                              |
-| :History                | n    |                    | browse history of commands                                   |
-| :Ag                     | n    | silversurfer > Ag  | content search within project directory                      |
-| <`leader`>/             | n,v  | vim-commentary     | toggle comment/uncomment a line or a block                   |
-| :SLoad                  | n    | vim-startify       | load a session [[ref#6,7](#References)]                      |
-| :SSave[!]               | n    | vim-startify       | save a session of open buffers                               |
-| :SDelete[!]             | n    | vim-startify       | delete a session                                             |
-| :SClose                 | n    | vim-startify       | close an open session                                        |
-| :SignifyToggle          | n    | vim-signify        | toggle git hunks in the gutter                               |
-| :SignifyToggleHighlight | n    | vim-signify        | toggle git status color highlites                            |
-| <`leader`>gj            | n    | vim-signify        | jump to next hunk                                            |
-| <`leader`>gk            | n    | vim-signify        | jump to previous hunk                                        |
-| :Git add                | n    | vim-fugitive       | git add ([ref#8](#References) for detail)                    |
-| :Git commit             | n    | vim-fugitive       | git commit                                                   |
-| :Git push               | n    | vim-fugitive       | git push                                                     |
-| :Git pull               | n    | vim-fugitive       | git pull                                                     |
-| :Git diff               | n    | vim-fugitive       | git diff                                                     |
-| :Git log                | n    | vim-fugitive       | git log                                                      |
-| :Git blame              | n    | vim-fugitive       | git blame                                                    |
-| :Gdiffsplit             | n    | vim-fugitive       | git diff in vsplit                                           |
-| :GRemove                | n    | vim-fugitive       | git rm                                                       |
-| :GBrowse                | n    | vim-fugitive       | open the current file on the web front-end                   |
-| :GV                     | n    | gv                 | open commit browser                                          |
-| :GV!                    | n    | gv                 | only list commits that affected the current file             |
-| :GV?                    | n    | gv                 | fills the location list with the revisions of the current file |
-| :GV or :GV?             | v    | gv                 | track the changes in the selected lines.                     |
-| gb                      | n    | gv > Commit buffer | :GBrowse commit under cursor                                 |
-| o                       | n    | gv > Commit buffer | show contents of a commit                                    |
-| o                       | v    | gv > Commit buffer | show diff of selected commits                                |
-| O                       | n,v  | gv > Commit buffer | open in a new tab                                            |
-| .                       | n    | gv > Commit buffer | open fugitive command `:Git [CURSOR] SHA`                    |
-| q                       | n    | gv > Commit buffer | close                                                        |
+| Mapping                 | Mode  | Supported by       | Description                                                  |
+| ----------------------- | ----- | ------------------ | ------------------------------------------------------------ |
+| M-j                     | n     | nvim               | resize h-split windows                                       |
+| M-k                     | n     | nvim               | resize h-split windows                                       |
+| M-h                     | n     | nvim               | resize v-split windows                                       |
+| M-l                     | n     | nvim               | resize v-split windows                                       |
+| C-u                     | n,i   | nvim               | easy caps current word                                       |
+| <`tab`>                 | n     | nvim               | move to next buffer                                          |
+| <S-`tab`>               | n     | nvim               | move to previous buffer                                      |
+| C-s                     | n     | nvim               | save                                                         |
+| C-q                     | n     | nvim               | quit neovim (after saving open buffers)                      |
+| <                       | n     | nvim               | insert tab (indent)                                          |
+| >                       | n     | nvim               | remove tab                                                   |
+| C-h                     | n     | nvim               | navigate to the window on left                               |
+| C-j                     | n     | nvim               | navigate to the window below                                 |
+| C-k                     | n     | nvim               | navigate to the window above                                 |
+| C-l                     | n     | nvim               | navigate to the window on right                              |
+| <M-;>                   | n,i,v | nvim               | move line(s) of code up                                      |
+| <M-.>                   | n,i,v | nvim               | move line(s) of code down                                    |
+| <`leader`>o             | n     | nvim               | insert empty line below current line                         |
+| <`leader`>O             | n     | nvim               | insert empty line above current line                         |
+| [g                      | n     | coc                | navigate previous diagnostic                                 |
+| ]g                      | n     | coc                | navigate next diagnostic                                     |
+| gd                      | n     | coc                | goto definition (of a ref.)                                  |
+| gy                      | n     | coc                | goto type definition                                         |
+| gi                      | n     | coc                | goto implementation                                          |
+| gr                      | n     | coc                | goto references (of a def.)                                  |
+| K                       | n     | coc                | show doc.                                                    |
+| <`leader`>rn            | n     | coc                | rename a symbol (all instances)                              |
+| <`leader`>a             | n     | coc > CocList      | show all diagnostics                                         |
+| <`leader`>c             | n     | coc > CocList      | show coc commands                                            |
+| <`leader`>ou            | n     | coc > CocList      | outline symbols of current doc.                              |
+| <`leader`>s             | n     | coc > CocList      | search workspace symbols                                     |
+| <`leader`>ex            | n     | coc > CocList      | manage extensions                                            |
+| <`leader`>e             | n     | coc > Explorer     | open coc file explorer                                       |
+| <`leader`>f             | n     | coc > Explorer     | open floating coc file explorer                              |
+| <`leader`>r             | n     | ranger             | toggle ranger file explorer                                  |
+| :FZF                    | n     | fzf > FZF          | fuzzy file search                                            |
+| C-f                     | n     | fzf > Files        | file search with preview                                     |
+| :BLines                 | n     | fzf > BLines       | search within a large file open in a buffer                  |
+| :Lines                  | n     | fzf > Lines        | search in all the open buffers                               |
+| <`leader`>b             | n     | fzf > Buffers      | buffer preview & switching                                   |
+| <`leader`>g             | n     | ripgrep > Rg       | ripgrep: regex search within file contents                   |
+| <`leader`>t             | n     | ctags > Tags       | Ctags:                                                       |
+| <`leader`>m             | n     | :Marks             |                                                              |
+| :History                | n     |                    | browse history of commands                                   |
+| :Ag                     | n     | silversurfer > Ag  | content search within project directory                      |
+| <`leader`>/             | n,v   | vim-commentary     | toggle comment/uncomment a line or a block                   |
+| :SLoad                  | n     | vim-startify       | load a session [[ref#6,7](#References)]                      |
+| :SSave[!]               | n     | vim-startify       | save a session of open buffers                               |
+| :SDelete[!]             | n     | vim-startify       | delete a session                                             |
+| :SClose                 | n     | vim-startify       | close an open session                                        |
+| :SignifyToggle          | n     | vim-signify        | toggle git hunks in the gutter                               |
+| :SignifyToggleHighlight | n     | vim-signify        | toggle git status color highlites                            |
+| <`leader`>gj            | n     | vim-signify        | jump to next hunk                                            |
+| <`leader`>gk            | n     | vim-signify        | jump to previous hunk                                        |
+| :Git add                | n     | vim-fugitive       | git add ([ref#8](#References) for detail)                    |
+| :Git commit             | n     | vim-fugitive       | git commit                                                   |
+| :Git push               | n     | vim-fugitive       | git push                                                     |
+| :Git pull               | n     | vim-fugitive       | git pull                                                     |
+| :Git diff               | n     | vim-fugitive       | git diff                                                     |
+| :Git log                | n     | vim-fugitive       | git log                                                      |
+| :Git blame              | n     | vim-fugitive       | git blame                                                    |
+| :Gdiffsplit             | n     | vim-fugitive       | git diff in vsplit                                           |
+| :GRemove                | n     | vim-fugitive       | git rm                                                       |
+| :GBrowse                | n     | vim-fugitive       | open the current file on the web front-end                   |
+| :GV                     | n     | gv                 | open commit browser                                          |
+| :GV!                    | n     | gv                 | only list commits that affected the current file             |
+| :GV?                    | n     | gv                 | fills the location list with the revisions of the current file |
+| :GV or :GV?             | v     | gv                 | track the changes in the selected lines.                     |
+| gb                      | n     | gv > Commit buffer | :GBrowse commit under cursor                                 |
+| o                       | n     | gv > Commit buffer | show contents of a commit                                    |
+| o                       | v     | gv > Commit buffer | show diff of selected commits                                |
+| O                       | n,v   | gv > Commit buffer | open in a new tab                                            |
+| .                       | n     | gv > Commit buffer | open fugitive command `:Git [CURSOR] SHA`                    |
+| q                       | n     | gv > Commit buffer | close                                                        |
 
 Completion and key binding files for `fzf` are located in `autoload/plugged/fzf/shell/`:
 
@@ -290,7 +299,7 @@ key-bindings.fish
 key-bindings.zsh
 ```
 
-In order to use  `fzf` commands and features in terminal, you need to source the relevant files as:
+If you want to use  `fzf` commands and features in terminal, source the relevant files as:
 
 ```sh
 source $HOME/.config/nvim/autoload/plugged/fzf/shell/completion.zsh
