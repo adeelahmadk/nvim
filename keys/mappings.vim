@@ -43,6 +43,16 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" alt + ;/. to move line(s) up/down
+nnoremap <M-.> :m .+1<CR>==
+nnoremap <M-;> :m .-2<CR>==
+inoremap <M-.> <Esc>:m .+1<CR>==gi
+inoremap <M-;> <Esc>:m .-2<CR>==gi
+vnoremap <M-.> :m '>+1<CR>gv=gv
+vnoremap <M-;> :m '<-2<CR>gv=gv
+
+" (o/O) insert balnk line below/above, 
+" (^D) del all in new line, (a) goto insert mode
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 

@@ -17,6 +17,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Pair Brackets - Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
 
+    " Cool Icons
+    " Plug 'kyazdani42/nvim-web-devicons'
+    " Plug 'ryanoasis/vim-devicons'
+
     " Theme - Onedark theme for nvim
     Plug 'joshdick/onedark.vim'
     " Theme - papercolor light/dark theme
@@ -26,6 +30,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Add Some Color
     Plug 'norcalli/nvim-colorizer.lua'
+    " colorful bracket pairs
     Plug 'junegunn/rainbow_parentheses.vim'
 
     " Intellisense - Stable version of coc
@@ -35,17 +40,20 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " File explorer & search
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
-
     " FZF fuzzy search
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
-    " vim-rooter
+    " Have the file system follow you around
     Plug 'airblade/vim-rooter'
 
     " Status / tabline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    " Better tabline. Todo: wait for v0.5.0, config: barbar.vim
+    " Plug 'romgrk/barbar.nvim'
+    " New advanced status line. Todo: wait for v0.5.0, config: nvcodeline.lua, deps.: devicons
+    " Plug 'glepnir/galaxyline.nvim'
 
     " comment out code
     Plug 'tpope/vim-commentary'
@@ -58,4 +66,27 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
+    " easily create gists
+    Plug 'mattn/vim-gist'
+
+    " keybindings popup
+    Plug 'liuchengxu/vim-which-key'
+
+    " floating terminal for neovim
+    Plug 'voldikss/vim-floaterm'
+
+    " code snippets for neovim
+    Plug 'honza/vim-snippets'
+    " Interactive code, Todo: write config
+    " Plug 'metakirby5/codi.vim'
+    " emmet for vim
+    Plug 'mattn/emmet-vim'
+    " Auto change html tags
+    Plug 'AndrewRadev/tagalong.vim'
+    " async tasks, Todo: write config.
+    " Plug 'skywind3000/asynctasks.vim'
+    " Plug 'skywind3000/asyncrun.vim'
+
+    " zen mode: distraction free writing, Todo hack config
+    Plug 'junegunn/goyo.vim'
 call plug#end()
