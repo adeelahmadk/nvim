@@ -23,6 +23,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Theme - Onedark theme for nvim
     Plug 'joshdick/onedark.vim'
+    " Theme - Nord theme for nvim
+    Plug 'arcticicestudio/nord-vim'
     " Theme - papercolor light/dark theme
     Plug 'NLKNguyen/papercolor-theme'
     " Theme - GitHub inspired light theme

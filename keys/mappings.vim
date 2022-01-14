@@ -51,6 +51,11 @@ inoremap <M-;> <Esc>:m .-2<CR>==gi
 vnoremap <M-.> :m '>+1<CR>gv=gv
 vnoremap <M-;> :m '<-2<CR>gv=gv
 
+" Cycle through line numbers & relative line numbers
+" nnoremap <silent> <F6> :exec &nu==&rnu? "set nu!" : "set rnu!"<CR>
+" Toggle between absolute line numbers & relative line numbers(set number relativenumber)
+nnoremap <silent> <F5> :exec &nu==&rnu? "set rnu!" : "set rnu"<CR>
+
 " (o/O) insert balnk line below/above, 
 " (^D) del all in new line, (a) goto insert mode
 nnoremap <Leader>o o<Esc>^Da

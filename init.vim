@@ -5,7 +5,7 @@
 " /_/_/ /_/_/\__(_)___/_/_/ /_/ /_/
 "
 " File: init.vim
-" Author: codegenki
+" Author: Adeel Ahmad <adeeldev@gmail.com>
 " Description: main neovim configuration file
 " Last Modified: November 10, 2020
 
@@ -18,6 +18,8 @@ source $HOME/.config/nvim/keys/mappings.vim
 
 " onedark theme config
 source $HOME/.config/nvim/themes/onedark.vim
+" nord theme config
+" source $HOME/.config/nvim/themes/nord.vim
 " Theme - papercolor light/dark theme
 " source $HOME/.config/nvim/themes/papercolor.vim
 " Theme - github light theme
