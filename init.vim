@@ -22,8 +22,11 @@ source $HOME/.config/nvim/themes/onedark.vim
 " source $HOME/.config/nvim/themes/nord.vim
 " Theme - papercolor light/dark theme
 " source $HOME/.config/nvim/themes/papercolor.vim
+" Theme - gruvbox light/dark theme
+" source $HOME/.config/nvim/themes/gruvbox.vim
 " Theme - github light theme
 " source $HOME/.config/nvim/themes/github.vim
+
 " plug-in airline config
 source $HOME/.config/nvim/themes/airline.vim
 " barbar tabline config
