@@ -56,7 +56,7 @@ vnoremap <M-;> :m '<-2<CR>gv=gv
 " Toggle between absolute line numbers & relative line numbers(set number relativenumber)
 nnoremap <silent> <F5> :exec &nu==&rnu? "set rnu!" : "set rnu"<CR>
 
-" (o/O) insert balnk line below/above, 
+" (o/O) insert balnk line below/above,
 " (^D) del all in new line, (a) goto insert mode
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da

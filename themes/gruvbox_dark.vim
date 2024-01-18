@@ -1,8 +1,7 @@
 " File: gruvbox.vim theme configuration
 
 " ***Restart required after switching mode***
-" set background=dark    " Setting dark mode
-set background=light   " Setting light mode
+set background=dark    " Setting dark mode
 
 " Since gruvbox inverts cursor color, it could be awkward
 " to determine current position, when the search is highlighted.

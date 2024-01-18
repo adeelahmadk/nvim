@@ -284,6 +284,7 @@ The leader key is set to `space`. Frequently used key bindings are listed in the
 | <M-.>         |                                   | n,i,v | nvim                     | move line(s) of code down                                    |
 | o             |                                   | n     | nvim                     | insert empty line below current line                         |
 | O             |                                   | n     | nvim                     | insert empty line above current line                         |
+| `F5`          |                                   | n     | nvim                     | Toggle between normal and relative line numbers              |
 | <`leader`>o   | `o<Esc>^Da`                       | n     | nvim                     | insert empty line below, delete line, insert mode            |
 | <`leader`>O   | `O<Esc>^Da`                       | n     | nvim                     | insert empty line above, delete line, insert mode            |
 | **CoC**       |                                   |       |                          |                                                              |
@@ -428,6 +429,27 @@ source $HOME/.config/nvim/autoload/plugged/fzf/shell/key-bindings.zsh
 
 source $HOME/.config/nvim/autoload/plugged/fzf/shell/completion.bash
 source $HOME/.config/nvim/autoload/plugged/fzf/shell/key-bindings.bash
+```
+
+### Plug-in Key Bindings
+
+#### auto-pairs
+
+Fast Wrap
+
+```
+input: |[foo, bar()] (press (<M-e> at |)
+output: ([foo, bar()])
+```
+
+Quick move char to closed pair
+
+```
+input: (|){["foo"]} (press <M-}> at |)
+output: ({["foo"]}|)
+
+input: |[foo, bar()] (press (<M-]> at |)
+output: ([foo, bar()]|)
 ```
 
 

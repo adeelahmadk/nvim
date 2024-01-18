@@ -23,7 +23,8 @@ source $HOME/.config/nvim/themes/onedark.vim
 " Theme - papercolor light/dark theme
 " source $HOME/.config/nvim/themes/papercolor.vim
 " Theme - gruvbox light/dark theme
-" source $HOME/.config/nvim/themes/gruvbox.vim
+" source $HOME/.config/nvim/themes/gruvbox_dark.vim
+" source $HOME/.config/nvim/themes/gruvbox_light.vim
 " Theme - github light theme
 " source $HOME/.config/nvim/themes/github.vim
 
@@ -35,8 +36,9 @@ source $HOME/.config/nvim/themes/airline.vim
 " Path to bin utils required by the config
 
 " colorize color codes
-"lua require'plug-colorizer'
+" lua require'plug-colorizer'
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
+" bracket pair colorizer
 source $HOME/.config/nvim/plug-config/rainbow.vim
 
 source $HOME/.config/nvim/general/paths.vim

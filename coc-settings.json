@@ -1,14 +1,19 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
+    // "c",
+    // "go",
     "css",
     "markdown",
     "javascript",
+    "typescript",
     "html",
     "yaml",
     "json",
     "python"
   ],
+  //"prettier.tabWidth": 4,
   // python config
+  "python.pythonPath": "/usr/bin/python3",
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
